@@ -1,15 +1,16 @@
-//
-// Created by Victor Navarro on 13/02/24.
-//
+
 #include "Character.h"
 
-Character::Character(string _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
+using namespace std;
+
+Character::Character(std::string _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer, int _damage) {
     name = _name;
     health = _health;
     attack = _attack;
     defense = _defense;
     speed = _speed;
     isPlayer = _isPlayer;
+    damage= _damage;
 }
 
 void Character::setName(string _name) {
@@ -58,4 +59,16 @@ string Character::toString() {
 
 bool Character::getIsPlayer() {
     return isPlayer;
+}
+
+bool Character::getIsEnemy() {
+    return isEnemy;
+}
+
+void Character::setDamage(int _damage) {
+    damage=_damage;
+}
+
+int Character::getDamage() {
+    return damage;
 }

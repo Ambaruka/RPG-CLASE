@@ -8,7 +8,9 @@
 #include "../Character/Character.h"
 #include "../Enemy/Enemy.h"
 #include "./ActionResult.h"
+#include "Combat/Combat.h"
 
+class Combat;
 class Enemy;
 
 class Player: public Character {

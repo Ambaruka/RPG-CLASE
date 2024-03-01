@@ -24,9 +24,10 @@ void Player::doAttack(Character *target) {
 }
 
 void Player::takeDamage(int damage) {
-    setHealth(health - damage);
+    setHealth(health);
+    damage+=damage;
 
-    if(health <= 0) {
+    if(health <= damage) {
         cout<<"You have died"<<endl;
     }
     else {
@@ -35,7 +36,7 @@ void Player::takeDamage(int damage) {
 }
 
 bool Player::flee(vector<Enemy*> enemies) {
-    std::sort(enemies.begin(), enemies.end(), compareSpeed);
+    sort(enemies.begin(), enemies.end(), compareSpeed);
     Enemy* fastestEnemy = enemies[0];
     bool fleed = false;
     if(this->getSpeed() > fastestEnemy->getSpeed()) {

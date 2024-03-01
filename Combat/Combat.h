@@ -1,6 +1,4 @@
-//
-// Created by Victor Navarro on 19/02/24.
-//
+
 
 #ifndef RPG_COMBAT_H
 #define RPG_COMBAT_H
@@ -14,6 +12,9 @@
 
 using namespace std;
 
+class Player;
+class Enemy;
+
 class Combat {
 private:
     vector<Character*> participants;
@@ -23,7 +24,8 @@ private:
     Character* getTarget(Character* target);
 public:
     Combat(vector<Character*> _participants);
-    Combat(vector<Player*> _teamMembers, vector<Enemy*> _enemies);
+    Combat(vector<Player*> _teamMembers);
+    Combat(vector<Enemy*> _enemies);
     Combat();
     void addParticipant(Character *participant);
     void doCombat();

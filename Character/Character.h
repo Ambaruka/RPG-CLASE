@@ -1,6 +1,4 @@
-//
-// Created by Victor Navarro on 13/02/24.
-//
+
 
 #ifndef RPG_CHARACTER_H
 #define RPG_CHARACTER_H
@@ -16,6 +14,8 @@ protected:
     int defense;
     int speed;
     bool isPlayer;
+    bool isEnemy;
+    int damage;
 
 public:
     Character(string, int, int, int, int, bool);
@@ -35,6 +35,9 @@ public:
     int getSpeed();
     string toString();
     bool getIsPlayer();
+    bool getIsEnemy();
+    void setDamage(int);
+    int getDamage();
 };
 
 

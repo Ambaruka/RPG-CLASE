@@ -1,11 +1,9 @@
-//
-// Created by Victor Navarro on 19/02/24.
-//
 
 #ifndef RPG_UTILS_H
 #define RPG_UTILS_H
+#include "Character/Character.h"
 #include <cstdlib>
-
+#include <iostream>
 namespace combat_utils {
     int getRolledAttack(int attack) {
         srand(time(NULL));
