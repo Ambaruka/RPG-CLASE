@@ -1,6 +1,5 @@
-//
-// Created by Victor Navarro on 13/02/24.
-//
+
+#include <algorithm>
 #include "Player.h"
 #include <iostream>
 #include "../Utils.h"

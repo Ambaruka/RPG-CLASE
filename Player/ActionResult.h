@@ -1,6 +1,4 @@
-//
-// Created by Victor Navarro on 26/02/24.
-//
+
 
 #ifndef RPG_ACTIONRESULT_H
 #define RPG_ACTIONRESULT_H

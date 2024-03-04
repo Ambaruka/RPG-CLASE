@@ -1,6 +1,4 @@
-//
-// Created by Victor Navarro on 13/02/24.
-//
+
 
 #ifndef RPG_PLAYER_H
 #define RPG_PLAYER_H
@@ -8,7 +6,7 @@
 #include "../Character/Character.h"
 #include "../Enemy/Enemy.h"
 #include "./ActionResult.h"
-#include "Combat/Combat.h"
+#include <vector>
 
 class Combat;
 class Enemy;

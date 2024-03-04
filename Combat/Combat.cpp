@@ -2,6 +2,8 @@
 #include "Combat.h"
 #include <iostream>
 #include <algorithm>
+#include <vector>
+
 
 using namespace std;
 
@@ -12,20 +14,9 @@ bool compareSpeed(Character *a, Character *b) {
 }
 
 Combat::Combat(vector<Character *> _participants) {
-    participants = std::move(_participants);
-    for(auto participant: participants) {
-        if(participant->getIsPlayer()) {
-            teamMembers.push_back((Player*)participant);
-        }
-        else {
-            enemies.push_back((Enemy*)participant);
-        }
-    }
-}
-
-Combat::Combat(vector<Player*> _teamMembers, vector<Enemy*> _enemies) {
-    teamMembers = std::move(_teamMembers);
-    enemies = std::move(_enemies);
+    teamMembers = std::move(teamMembers);
+    enemies = std::move(enemies);
+    //duda com std::move()
 }
 
 Combat::Combat() {
